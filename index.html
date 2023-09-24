@@ -3,149 +3,217 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./style.css" rel="stylesheet" />
+    <meta name="theme-color" content="#aaa4cb" />
     <title>Osama Shoora's Resume</title>
   </head>
-  <body
-    style="
-      font-family: Calibri, Futura, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS',
-        sans-serif;
-    "
-  >
-    <h1 style="text-align: center">Osama Shoora</h1>
-    <hr style="width: 200px" />
-    <center><img src="./images/pic1.jpg" width="200px" /></center>
-    <hr />
+  <body>
+    <!-- Header -->
+    <section class="flex-container intro">
+      <div class="container header">
+        <div class="profile-container">
+          <div class="frame1"></div>
+          <div class="frame2"></div>
+          <img src="./images/pic1.jpg" class="profile" />
+        </div>
+        <div class="about-container">
+          <h1 class="name">Osama Shoora</h1>
+          <h2 class="about">
+            Computer Engineering student into<br />Front-End and Motion Design
+          </h2>
+        </div>
+      </div>
+      <div class="scroll-container">
+        <p class="scroll-animation" onclick="scrollSmooth()">
+          Scroll for more
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            fill="currentColor"
+            class="bi bi-chevron-double-down scroll-animation"
+            viewBox="0 0 17 10"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+            />
+            <path
+              fill-rule="evenodd"
+              d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+            />
+          </svg>
+        </p>
+      </div>
+    </section>
 
-    <h2>Summary</h2>
-    <p>
-      Fourth-year computer engineering student with a strong passion for design
-      and animation, excelling in merging technical skills with artistic
-      creativity. Aiming to bridge the worlds of Front-End Development and
-      Motion Design, with a love for design, and animation combined with
-      technical expertise, driving the pursuit of a career that merges these
-      passions and brings innovative projects to life.
-    </p>
-    <hr />
+    <!-- Summary -->
+    <section class="flex-container card">
+      <section class="flex-container card summary">
+        <h2>Summary</h2>
+        <p>
+          Fourth-year computer engineering student with a strong passion for
+          design and animation, excelling in merging technical skills with
+          artistic creativity. Aiming to bridge the worlds of Front-End
+          Development and Motion Design, with a love for design, and animation
+          combined with technical expertise, driving the pursuit of a career
+          that merges these passions and brings innovative projects to life.
+        </p>
+        <!-- <hr /> -->
+      </section>
+    </section>
 
-    <h2>Education</h2>
-    <ul>
-      <li>
-        <h4>Bachelor of Computer Engineering</h4>
-        <p>Birzeit University • Birzeit, Ramallah • 2020 - Present</p>
+    <section class="flex-container card edu-exp">
+      <section class="flex-container card education">
+        <h2>Education</h2>
         <ul>
           <li>
-            Awarded full scholarship for one semester due to placing in the
-            Honor's List.
+            <h4>Bachelor of Computer Engineering</h4>
+            <p>Birzeit University • Birzeit, Ramallah • 2020 - Present</p>
+            <ul>
+              <li>
+                Awarded full scholarship for one semester due to placing in the
+                Honor's List.
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <h4>Tawjihi (High School) Degree</h4>
+            <p>
+              Al-Fadiliyah School • Tulkarm • 2019 - 2020 • Average of
+              <b>98.1</b>
+            </p>
           </li>
         </ul>
-      </li>
+        <!-- <hr /> -->
+      </section>
 
-      <li>
-        <h4>Tawjihi (High School) Degree</h4>
-        <p>
-          Al-Fadiliyah School • Tulkarm • 2019 - 2020 • Average of <b>98.1</b>
-        </p>
-      </li>
-    </ul>
-    <hr />
-
-    <h2>Experience</h2>
-    <ul>
-      <li>
-        <h4>Graphic & Motion Designer</h4>
-        <p>Freelance • October 2017 - Present</p>
+      <section class="flex-container card experience">
+        <h2>Experience</h2>
         <ul>
-          <li>Created logo animations for numerous clients.</li>
-          <li>Created and animated designs and posts for social media.</li>
-          <li>Rebranding for various clients and start-ups.</li>
-        </ul>
-      </li>
+          <li>
+            <h4>Graphic & Motion Designer</h4>
+            <p>Freelance • October 2017 - Present</p>
+            <ul>
+              <li>Created logo animations for numerous clients.</li>
+              <li>Created and animated designs and posts for social media.</li>
+              <li>Rebranding for various clients and start-ups.</li>
+            </ul>
+          </li>
 
-      <li>
-        <h4>Remote Graphic & Motion Designer</h4>
-        <p>Lazy Vibes • January 2018 - March 2018, USA</p>
+          <li>
+            <h4>Remote Graphic & Motion Designer</h4>
+            <p>Lazy Vibes • January 2018 - March 2018, USA</p>
+            <ul>
+              <li>Designed social media posts and ads.</li>
+              <li>Animated several logo options.</li>
+              <li>Created animations for their video posts.</li>
+            </ul>
+          </li>
+        </ul>
+        <hr />
+      </section>
+
+      <section class="flex-container card skills">
+        <h2>Skills</h2>
         <ul>
-          <li>Designed social media posts and ads.</li>
-          <li>Animated several logo options.</li>
-          <li>Created animations for their video posts.</li>
+          <li>
+            <b>Languages:</b> English (fluent): C level (CEFR), Arabic (fluent),
+            Spanish (intermediate).
+          </li>
+          <li>
+            <b>Programming Languages:</b> Python (advanced) , Java (beginner), C
+            (intermediate).
+          </li>
+          <li>
+            <b>Front-End:</b> HTML (intermediate), CSS (beginner), JavaScript
+            (beginner).
+          </li>
+          <li>
+            <b>Design Software:</b> After Effects (advanced), Photoshop
+            (intermediate), Illustrator (advanced), Premiere Pro (intermediate),
+            Cinema 4D (beginner).
+          </li>
+          <li>
+            <b>Design Skills:</b> 2D Motion Design (advanced), 3D Motion Design
+            (beginner), Graphic Design (intermediate), Video Editing (advanced).
+          </li>
+          <li>
+            <b>Soft Skills:</b> Client Communication, Creative Problem Solving,
+            Adaptability, Attention to Detail, Understanding Branding, Critique
+            Handling.
+          </li>
         </ul>
-      </li>
-    </ul>
-    <hr />
+        <hr />
+      </section>
+    </section>
 
-    <h2>Skills</h2>
-    <ul>
-      <li>
-        <b>Languages:</b> English (fluent): C level (CEFR), Arabic (fluent),
-        Spanish (intermediate).
-      </li>
-      <li>
-        <b>Programming Languages:</b> Python (advanced) , Java (beginner), C
-        (intermediate).
-      </li>
-      <li>
-        <b>Front-End:</b> HTML (intermediate), CSS (beginner), JavaScript
-        (beginner).
-      </li>
-      <li>
-        <b>Design Software:</b> After Effects (advanced), Photoshop
-        (intermediate), Illustrator (advanced), Premiere Pro (intermediate),
-        Cinema 4D (beginner).
-      </li>
-      <li>
-        <b>Design Skills:</b> 2D Motion Design (advanced), 3D Motion Design
-        (beginner), Graphic Design (intermediate), Video Editing (advanced).
-      </li>
-      <li>
-        <b>Soft Skills:</b> Client Communication, Creative Problem Solving,
-        Adaptability, Attention to Detail, Understanding Branding, Critique
-        Handling.
-      </li>
-    </ul>
-    <hr />
+    <section class="flex-container card courses-certifications">
+      <section class="flex-container card courses">
+        <h2>Courses</h2>
+        <ul>
+          <li>
+            <h4>Advanced JavaScript Bootcamp</h4>
+            <p>GDSC-BZU, Gaza Sky Geeks • 2023</p>
+          </li>
 
-    <h2>Courses</h2>
-    <ul>
-      <li>
-        <h4>Advanced JavaScript Bootcamp</h4>
-        <p>GDSC-BZU, Gaza Sky Geeks • 2023</p>
-      </li>
+          <li>
+            <h4>Marketing</h4>
+            <p>INJAZ • 2019</p>
+          </li>
 
-      <li>
-        <h4>Marketing</h4>
-        <p>INJAZ • 2019</p>
-      </li>
+          <li>
+            <h4>Photography</h4>
+            <p>Galaxy • 2019</p>
+          </li>
 
-      <li>
-        <h4>Photography</h4>
-        <p>Galaxy • 2019</p>
-      </li>
+          <li>
+            <h4>Intro to HTML</h4>
+            <p>Glow Innovations • 2018</p>
+          </li>
+        </ul>
+        <hr />
+      </section>
 
-      <li>
-        <h4>Intro to HTML</h4>
-        <p>Glow Innovations • 2018</p>
-      </li>
-    </ul>
-    <hr />
+      <section class="flex-container card certifications">
+        <h2>Certifications</h2>
+        <ul>
+          <li>
+            <h3>Advanced JavaScript Bootcamp</h3>
+            <p>GDSC-BZU, Gaza Sky Geeks • 2023</p>
+          </li>
+        </ul>
+        <hr />
+      </section>
+    </section>
 
-    <h2>Certifications</h2>
-    <ul>
-      <li>
-        <h3>Advanced JavaScript Bootcamp</h3>
-        <p>GDSC-BZU, Gaza Sky Geeks • 2023</p>
-      </li>
-    </ul>
-    <hr />
+    <footer class="flex-container other">
+      <h2>Other</h2>
+      <ul>
+        <li><a href="./public/projects.html" target="_blank">Projects</a></li>
+        <li>
+          <a href="./public/contact.html" target="_blank">Contact Details</a>
+        </li>
+      </ul>
+      <small>© Osama Shoora.</small>
+    </footer>
 
-    <h2>Other</h2>
-    <ul>
-      <li><a href="./public/projects.html" target="_blank">Projects</a></li>
-      <li>
-        <a href="./public/contact.html" target="_blank">Contact Details</a>
-      </li>
-    </ul>
+    <script>
+      function scrollSmooth() {
+        // Find the height of the viewport
+        const viewportHeight =
+          window.innerHeight || document.documentElement.clientHeight;
+
+        // Calculate the position to scroll to (one viewport height down)
+        const scrollToY = window.scrollY + viewportHeight;
+
+        // Scroll smoothly to the calculated position
+        window.scrollTo({
+          top: scrollToY,
+          behavior: "smooth", // Add smooth scrolling behavior
+        });
+      }
+    </script>
   </body>
-  <footer>
-    <small>© Osama Shoora.</small>
-  </footer>
 </html>
