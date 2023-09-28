@@ -1,6 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;600;700;800;900&display=swap");
 /*#8C2B4F  #D95988   #F299C2    #ffd9e9   #260517     #A9B9D9*/
 
+:root {
+  --clr-dark: #260517;
+  --clr-pastel-pink: #ffd9e9;
+  --clr-light-pink: #f299c2;
+  --clr-bg-light: rgba(245, 216, 227, 0.25);
+  --clr-bg-dark: #361e274a;
+}
+
+.dark-mode {
+  --clr-pastel-pink: #260517;
+  --clr-dark: #ffd9e9;
+  --clr-bg-dark: rgba(245, 216, 227, 0.25);
+  --clr-bg-light: #361e274a;
+}
+.light-mode {
+  transition: all 0.3s linear;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -25,6 +43,7 @@ body {
   background-size: 1000% auto;
   animation: gradient-animation 10s ease infinite;
   font-family: "Poppins", sans-serif;
+  color: var(--clr-dark);
 }
 @keyframes gradient-animation {
   0% {
@@ -68,7 +87,7 @@ body {
   grid-template-rows: 0.5fr 0.5fr;
   gap: 0px;
   padding: 0 20px;
-  background: rgba(245, 216, 227, 0.25);
+  background: var(--clr-bg-light);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(4.5px);
@@ -79,7 +98,7 @@ body {
 .card {
   /* color: #fce9f1; */
   height: auto;
-  background: rgba(245, 216, 227, 0.25);
+  background: var(--clr-bg-light);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(4.5px);
@@ -96,7 +115,7 @@ body {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr auto;
 }
-.skills{
+.skills {
   margin-top: 20px;
 }
 .education,
@@ -117,7 +136,6 @@ body {
   grid-column: span 2;
 }
 .card h2 {
-  /* color: #fce9f1; */
   font-weight: 700;
 }
 hr {
@@ -136,7 +154,6 @@ hr {
 }
 .header h1,
 h2 {
-  color: #260517;
   margin: 0;
   padding: 0;
   font-weight: 800;
@@ -151,17 +168,15 @@ h2 {
   margin: 30px 0;
   text-align: center;
   cursor: pointer;
+  color: #260517;
 }
 .intro p:hover {
   .scroll-animation {
     animation: loop-animation 2s ease infinite;
   }
 }
-.scroll-animation:hover {
-  animation: loop-animation 2s ease infinite;
-}
-.scroll-animation:not(:hover) {
-  transform: translateY(0px);
+.scroll-animation {
+  animation: loop-animation 2s ease-out infinite;
 }
 @keyframes loop-animation {
   0% {
@@ -219,7 +234,7 @@ ul {
   padding: 0 0 0 30px;
 }
 li {
-  padding: 0;
+  padding: 0 0 5px 0;
 }
 
 ul > li > h4 {
@@ -266,6 +281,28 @@ ul > li > ul {
   }
 }
 
+.darkmode-btn {
+  background-color: transparent;
+  border: 0;
+  position: fixed;
+  right: 0px;
+  cursor: pointer;
+  z-index: 1;
+  display: grid;
+  transition: all 0.3s;
+}
+.animate {
+  transform: rotate(180deg);
+}
+.darkmode-btn img {
+  width: 40px;
+}
+.darkmode-btn .button-shadow {
+  position: absolute;
+  filter: blur(10px);
+  right: 6px;
+}
+
 @media (max-width: 768px) {
   .header {
     flex: 0 1 30vw;
@@ -293,7 +330,8 @@ ul > li > ul {
   }
   .edu-exp {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 20px;
   }
   .courses-certifications {
     grid-template-columns: 1fr;
@@ -302,12 +340,10 @@ ul > li > ul {
   }
   .skills {
     grid-column: span 1;
+    margin-top: 0px;
   }
 }
 @media (max-width: 435px) {
-  .scroll-animation {
-    animation: loop-animation 2s ease-out infinite;
-  }
   .name {
     font-size: 2rem;
   }

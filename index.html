@@ -2,16 +2,29 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
     <link href="./style.css" rel="stylesheet" />
     <meta name="theme-color" content="#aaa4cb" />
     <title>Osama Shoora's Resume</title>
   </head>
-  <body>
+  <body class="light-mode">
     <!-- Logo -->
-    <div class="flex-container logo-back" >
-      <img src="./images/logo1.png" alt="logo" class="logo"/>
+    <div class="flex-container logo-back">
+      <img src="./images/logo1.png" alt="logo" class="logo" />
     </div>
+
+    <button
+      class="darkmode-btn theme-toggle"
+      id="target"
+      onclick="DoAnimation();"
+    >
+      <img src="./images/dark.svg" alt="" />
+      <img src="./images/dark.svg" alt="" class="button-shadow" />
+    </button>
+
     <!-- Header -->
     <section class="flex-container intro">
       <div class="container header">
@@ -214,6 +227,34 @@
           behavior: "smooth", // Add smooth scrolling behavior
         });
       }
+      function DoAnimation() {
+        var targetElement = document.getElementById("target");
+        targetElement.classList.toggle("animate");
+      }
+
+      // selectors
+      const themeToggleBtn = document.querySelector(".theme-toggle");
+
+      // state
+      const theme = localStorage.getItem("theme");
+      const isDark = window.matchMedia("(prefers-color-scheme:dark)").matches;
+
+      // on mount
+      theme && document.body.classList.add(theme);
+      isDark && document.body.classList.add("dark-mode");
+
+      // handlers
+      const handleThemeToggle = () => {
+        document.body.classList.toggle("dark-mode");
+        if (document.body.classList.contains("dark-mode")) {
+          localStorage.setItem("theme", "dark-mode");
+        } else {
+          localStorage.removeItem("theme");
+        }
+      };
+
+      // events
+      themeToggleBtn.addEventListener("click", handleThemeToggle);
     </script>
   </body>
 </html>
