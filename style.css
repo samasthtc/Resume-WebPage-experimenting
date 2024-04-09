@@ -170,11 +170,17 @@ h2 {
   cursor: pointer;
   color: #260517;
 }
+
 .intro p:hover {
   .scroll-animation {
     animation: loop-animation 2s ease infinite;
   }
 }
+
+.card p{
+font-weight: 500;
+}
+
 .scroll-animation {
   animation: loop-animation 2s ease-out infinite;
 }
