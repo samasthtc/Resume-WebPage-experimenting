@@ -1,15 +1,6 @@
-
-#  Resume Webpage
+# Resume Webpage
 
 This project is a personal resume webpage built using HTML, CSS, and JavaScript, showcasing various modern web design techniques including glassmorphism, light/dark mode toggling, scroll animations, and more.
-
-## Table of Contents
-
-- [Resume Webpage](#resume-webpage)
-  - [Table of Contents](#table-of-contents)
-  - [Features](#features)
-  - [Demo](#demo)
-
 
 ## Features
 
@@ -19,7 +10,6 @@ This project is a personal resume webpage built using HTML, CSS, and JavaScript,
 - **Animated Profile Picture**: Profile picture with an animated ring.
 - **Animated Gradient Background**: Background with a smoothly transitioning gradient.
 - **Responsive Design**: Optimized for different screen sizes, including mobile devices.
-
 
 ## Demo
 
