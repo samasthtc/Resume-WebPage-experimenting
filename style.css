@@ -65,6 +65,7 @@ body {
   top: 50vh;
   left: 50vw;
   transform: translate(-50%, -58%);
+  z-index: -1;
 }
 
 .flex-container {
@@ -113,16 +114,20 @@ body {
 .edu-exp {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr auto;
+  grid-template-rows: auto auto;
 }
-.skills {
-  margin-top: 20px;
+
+/* Define distinct background colors for each grid item */
+
+.education {
+  justify-content: flex-start;
+  grid-area: 2 / 1 / 3 / 2;
 }
-.education,
 .experience {
   justify-content: flex-start;
-  height: 90%;
+  grid-area: 1 / 2 / 3 / 3;
 }
+
 .courses-certifications {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -133,7 +138,27 @@ body {
   height: 85%;
 }
 .skills {
-  grid-column: span 2;
+  grid-area: 1 / 1 / 2 / 2;
+}
+.other {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.other ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.other .card {
+  list-style-type: none;
+  width: fit-content;
+  font-weight: 800;
 }
 .card h2 {
   font-weight: 700;
@@ -177,24 +202,10 @@ h2 {
   }
 }
 
-.card p{
-font-weight: 500;
+.card p {
+  font-weight: 500;
 }
 
-.scroll-animation {
-  animation: loop-animation 2s ease-out infinite;
-}
-@keyframes loop-animation {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(5px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
 .about-container {
   grid-area: 1/2/3/3;
   display: flex;
@@ -211,16 +222,40 @@ font-weight: 500;
   position: relative;
 }
 .scroll-container {
-  grid-column: span 2;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
   position: relative;
+  padding: 0px;
+  margin: 0px;
 }
-.other {
-  flex-direction: column;
+
+.scroll-container p {
+  color: #9fe9f9;
+  filter: drop-shadow(0 0 6px rgb(0, 0, 0));
 }
+
+svg {
+  /* fix position down by 5px */
+  position: relative;
+  top: 5px;
+}
+.scroll-animation {
+  animation: loop-animation 2s ease-out infinite;
+}
+@keyframes loop-animation {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
 .profile {
   float: left;
   width: 15vw;
@@ -256,6 +291,10 @@ li > p {
 ul > li > ul {
   padding-left: 20px;
   font-size: 0.9rem;
+}
+
+a {
+  color: #9fe9f9;
 }
 
 .frame1,
@@ -308,8 +347,21 @@ ul > li > ul {
   filter: blur(10px);
   right: 6px;
 }
+@media (min-width: 1300px) {
+  .skills {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  .education {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+  .experience {
+    grid-area: 1 / 2 / 3 / 3;
+    /* grid-row: aut; */
+    /* padding-bottom: 28px; */
+  }
+}
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .header {
     flex: 0 1 30vw;
     padding-right: 10px;
@@ -337,19 +389,19 @@ ul > li > ul {
   .edu-exp {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
-    gap: 20px;
-  }
-  .courses-certifications {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr auto;
-    padding-bottom: 30px;
   }
   .skills {
-    grid-column: span 1;
-    margin-top: 0px;
+    grid-area: span 1;
+  }
+
+  .education {
+    grid-area: span 1;
+  }
+  .experience {
+    grid-area: span 1;
   }
 }
-@media (max-width: 435px) {
+@media (max-width: 560px) {
   .name {
     font-size: 2rem;
   }
@@ -362,5 +414,9 @@ ul > li > ul {
   .logo-back {
     width: 200px;
     transform: translate(-50%, -66%);
+  }
+  .courses-certifications {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
   }
 }
