@@ -4,8 +4,7 @@
     <meta charset="UTF-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1, viewport-fit=cover"
-    />
+      content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <link href="./style.css" rel="stylesheet" />
     <meta name="theme-color" content="#aaa4cb" />
     <title>Osama Shoora's Resume</title>
@@ -17,26 +16,28 @@
     </div>
 
     <button
-      class="darkmode-btn theme-toggle"
+      class="darkmode-btn"
       id="target"
-      onclick="DoAnimation();"
-    >
-      <img src="./images/dark.svg" alt="" />
-      <img src="./images/dark.svg" alt="" class="button-shadow" />
+      onclick="DoAnimation();">
+      <img src="./images/dark.svg" alt />
+      <img src="./images/dark.svg" alt class="button-shadow" />
     </button>
 
     <!-- Header -->
     <section class="flex-container intro">
       <div class="container header">
         <div class="profile-container">
-          <div class="frame1"></div>
-          <div class="frame2"></div>
+          <!-- <div class="frame2"></div> -->
+          <div class="ring-back"></div>
           <img src="./images/pic1.jpg" class="profile" />
+          <div class="ring-front"></div>
         </div>
         <div class="about-container">
           <h1 class="name">Osama Shoora</h1>
           <h2 class="about">
-            Computer Engineering student into<br />Web Development and Motion
+            Computer Engineering student<br />into Web & Mobile
+            Development<br />and
+            Motion
             Design
           </h2>
         </div>
@@ -53,8 +54,7 @@
             stroke="currentColor"
             stroke-width="2"
             stroke-linecap="round"
-            stroke-linejoin="round"
-          >
+            stroke-linejoin="round">
             <path d="M7 13l5 5 5-5M7 7l5 5 5-5" />
           </svg>
         </p>
@@ -85,20 +85,25 @@
         <ul>
           <li>
             <b>Languages:</b> English (fluent): C level (CEFR), Arabic (fluent),
-            Spanish (intermediate).
+            Spanish (conversational).
           </li>
           <li>
-            <b>Programming Languages:</b> Python, Java, C, MySQL, Verilog HDL,
-            Assembly.
+            <b>Programming Languages:</b> Python, Java, C, MySQL.
           </li>
-          <li><b>Front-End:</b> HTML, CSS, SASS, JavaScript.</li>
+          <li><b>Front End/Back End:</b> HTML, CSS, SASS, JavaScript,
+            SpringBoot, NodeJS, Markdown.</li>
+          <li><b>Mobile:</b> Java, Flutter, Dart.</li>
+          <li><b>Frameworks & Libraries:</b> JavaFX, jQuery, SQLite, NumPy,
+            Pandas, OpenCV, MatPlotLib, Sci-kit Learn, PyTorch, TensorFlow.</li>
+          <li><b>Tools & Version Contro:</b> Git, GitHub.</li>
           <li>
             <b>Design Software:</b> After Effects, Photoshop, Illustrator,
             Premiere Pro, Cinema 4D.
           </li>
           <li>
-            <b>Design Skills:</b> 2D Motion Design, 3D Motion Design (beginner),
-            Graphic Design, Video Editing.
+            <b>Creative Skills:</b> UI/UX, 2D Motion Design, 3D Motion Design
+            (beginner),
+            Graphic Design.
           </li>
           <li>
             <b>Soft Skills:</b> Client Communication, Creative Problem Tackling,
@@ -167,29 +172,30 @@
       </section>
     </section>
 
-    <section class="flex-container card courses-certifications">
+    <section class="flex-container card courses-certifications-contact">
       <section class="flex-container card courses">
         <h2>Courses</h2>
         <ul>
+          <li>
+            <h4>Flutter</h4>
+            <p>The Hope Intl. • 2024</p>
+          </li>
+
+          <li>
+            <h4>UI/UX</h4>
+            <p>IEEE Gaza • 2024</p>
+          </li>
+
+          <li>
+            <h4>Web Dev Bootcamp</h4>
+            <p>Udemy • 2023</p>
+          </li>
+
           <li>
             <h4>Advanced JavaScript Bootcamp</h4>
             <p>GDSC-BZU, Gaza Sky Geeks • 2023</p>
           </li>
 
-          <li>
-            <h4>Marketing</h4>
-            <p>INJAZ • 2019</p>
-          </li>
-
-          <li>
-            <h4>Photography</h4>
-            <p>Galaxy • 2019</p>
-          </li>
-
-          <li>
-            <h4>Intro to HTML</h4>
-            <p>Glow Innovations • 2018</p>
-          </li>
         </ul>
       </section>
 
@@ -199,9 +205,26 @@
           <li>
             <h4>
               <a
-                href="https://credsverse.com/credentials/0abc3466-1c5b-4b9c-9fdd-5f3ae3a615f6"
-                >JavaScript Student Instructor</a
-              >
+                href="https://credsverse.com/credentials/0abc3466-1c5b-4b9c-9fdd-5f3ae3a615f6">JavaScript
+                Student Instructor</a>
+            </h4>
+            <p>Gaza Sky Geeks • 2024</p>
+          </li>
+          <li>
+            <h4>Advanced JavaScript Bootcamp</h4>
+            <p>GDSC-BZU, Gaza Sky Geeks • 2023</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="flex-container card contact">
+        <h2>Contact</h2>
+        <ul>
+          <li>
+            <h4>
+              <a
+                href="https://credsverse.com/credentials/0abc3466-1c5b-4b9c-9fdd-5f3ae3a615f6">JavaScript
+                Student Instructor</a>
             </h4>
             <p>Gaza Sky Geeks • 2024</p>
           </li>
@@ -218,9 +241,6 @@
       <ul>
         <li class="card">
           <a href="./public/projects.html" target="_blank">Projects</a>
-        </li>
-        <li class="card">
-          <a href="./public/contact.html" target="_blank">Contact Details</a>
         </li>
       </ul>
       <small>© Osama Shoora.</small>

@@ -18,7 +18,7 @@ function DoAnimation() {
 }
 
 // selectors
-const themeToggleBtn = document.querySelector(".theme-toggle");
+const themeToggleBtn = document.querySelector(".darkmode-btn");
 
 // state
 const theme = localStorage.getItem("theme");
