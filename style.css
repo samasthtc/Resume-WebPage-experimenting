@@ -269,6 +269,7 @@ svg {
 
 .card > p {
   margin: 0;
+  text-align: justify;
 }
 .card > h2 {
   margin: 0 0 10px 0;
