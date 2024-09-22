@@ -1,0 +1,375 @@
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 32px;
+  background-color: #1e060c;
+  /* background: linear-gradient(120deg, rgb(205, 71, 134), rgb(70, 183, 205)); */
+  color: #ffffff;
+}
+
+.nav-wrapper {
+  width: 100%;
+  position: sticky;
+  top: 8px;
+  z-index: 1;
+  border-radius: 25px;
+}
+
+nav {
+  margin: 0 auto;
+  width: fit-content;
+  border-radius: 25px;
+  /* background-color: #a84467; */
+  background: linear-gradient(-10deg, #8f476c, #ab3170);
+  box-shadow: 0px 0px 16px 4px #00000055;
+}
+
+nav ul {
+  padding: 8px 8px 12px 8px;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+nav ul li a {
+  color: #ffffff;
+  padding: 0px 8px;
+  border-radius: 25px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  /* background-color: #643255; */
+  color: #24cefd;
+}
+
+nav ul li a:active {
+  color: #f293c4;
+}
+
+nav ul li a:focus {
+  background-color: #643255;
+}
+
+header {
+  background: url(assets/headerBG.jpg) no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 24px;
+  display: inline-block;
+  border-radius: 16px;
+}
+
+h1.name {
+  /* color: #ffe6f4; */
+  font-size: 3rem;
+  font-family: Futura;
+  font-weight: bold;
+  margin: 0px;
+  text-shadow: 0px 0px 24px #000000aa;
+}
+
+.name:hover {
+  color: #be285d;
+}
+
+p.brief {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0px;
+  text-shadow: 0px 0px 24px #000000aa;
+}
+
+header img {
+  width: 15%;
+  border-radius: 16px;
+  margin-block: 16px;
+  box-shadow: 0px 0px 24px 8px #00000055;
+}
+
+header img:hover {
+  border-radius: 50%;
+}
+
+section:nth-child(even) {
+  background-color: #56668b;
+  background: linear-gradient(45deg, #56668b, #516ba9);
+}
+
+section:nth-child(odd) {
+  background-color: #8a3762;
+  background: linear-gradient(-45deg, #672547, #ab3170);
+}
+
+section {
+  margin-top: 30px;
+  border-radius: 16px;
+  padding: 24px;
+  position: relative;
+}
+
+section h2 {
+  text-align: center;
+  margin-top: 0;
+  margin-inline: 120px;
+  text-shadow: 0px 0px 24px #000000aa;
+}
+
+#about_me {
+  text-align: justify;
+}
+
+#about_me p {
+  font-size: 20px;
+  /* font-weight: 400; */
+}
+
+#skills {
+  background: linear-gradient(45deg, #56668b55, #516ba9da),
+    url(assets/tech_stack.svg);
+  background-size: cover, auto;
+  background-repeat: repeat;
+}
+
+#skills ul {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  position: relative;
+  /* text-align: justify; */
+}
+
+#skills ul li {
+  display: inline-block;
+  list-style: none;
+  font-size: 20px;
+  font-weight: 500;
+  background-color: #a84467;
+  border-radius: 50px;
+  margin: 8px 8px;
+  margin-top: 0;
+  padding: 4px 18px;
+  position: relative;
+  box-shadow: 0px 0px 16px 4px #00000055;
+}
+
+#skills ul li:hover {
+  /* background-color: #812545; */
+  background-color: #00000033;
+  top: -5px;
+  box-shadow: 0px 0px 8px 4px #00000022;
+}
+
+#skills ul li:active {
+  top: 2.5px;
+}
+
+#skills li.languages {
+  background-color: #c52e6b;
+}
+#skills li.programmingLanguages {
+  background-color: #b93a75;
+}
+#skills li.frontEnd {
+  background-color: #ac467f;
+}
+#skills li.backEnd {
+  background-color: #a05288;
+}
+#skills li.mobile {
+  background-color: #945e92;
+}
+#skills li.db {
+  background-color: #87699c;
+}
+#skills li.libs {
+  background-color: #7b75a6;
+}
+#skills li.control {
+  background-color: #6f81af;
+}
+#skills li.design {
+  background-color: #628db9;
+}
+#skills li.creative {
+  background-color: #5699c3;
+}
+
+#projects ul {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  position: relative;
+  text-align: center;
+  vertical-align: top;
+}
+
+#projects ul li {
+  display: inline-block;
+  list-style: none;
+  font-weight: 500;
+  background-color: #a84467;
+  border-radius: 48px;
+  margin: 16px 8px;
+  margin-top: 0;
+  padding: 24px 24px;
+  position: relative;
+  box-shadow: 0px 0px 24px 8px #00000022;
+  vertical-align: top;
+}
+
+#projects ul li h4 {
+  margin: 0;
+}
+
+#projects a{
+  color: #2bdcff;
+  text-decoration: none;
+}
+
+#projects a:hover {
+  color: #2b8eda;
+}
+
+#projects a:active{
+  color: #1c6dac;
+}
+
+#projects ul li img,
+#projects ul li video {
+  height: 555.524px;
+  border-radius: 24px;
+  margin: 16px auto 0 auto;
+}
+#projects ul li img.gif {
+  width: 250px;
+  height: auto;
+}
+
+form {
+  max-width: 600px;
+  margin: 0px auto;
+  padding: 24px;
+  /* background-color: #f9f9f9; */
+  background: linear-gradient(-45deg, #672547, #ab3170);
+  border-radius: 12px;
+  box-shadow: 0px 0px 8px #00000022;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+}
+
+legend {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  width: 100%;
+  display: block;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: #517de2;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+button {
+  padding: 12px 20px;
+  /* background-color: #43a5d6; */
+  background: linear-gradient(15deg, #0c78ae, #43a5d6);
+  width: 100%;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background: #0c78ae;
+}
+
+button:active {
+  background: #30789c;
+}
+
+.go-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #df92ad;
+  color: #181818;
+  padding: 10px 16px;
+  border-radius: 25px;
+  text-align: center;
+  font-size: 24px;
+  z-index: 1;
+}
+
+.go-to-top:hover {
+  background-color: #b03d65;
+  cursor: pointer;
+}
+
+footer {
+  margin-top: 30px;
+  border-radius: 50px;
+  padding: 16px 16px;
+  background: linear-gradient(-10deg, #8f476c, #ab3170);
+  text-align: center;
+  font-weight: 500;
+}
+
+footer:hover {
+  background: linear-gradient(-10deg, #ab3170, #8f476c);
+}
+
+footer p {
+  margin: 0;
+}
+
+footer a {
+  color: #10d1f3;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #2b8eda;
+}
